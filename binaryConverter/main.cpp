@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <string>
 #include "bconv.h"
 
 int main(int argc, char* argv[]) {

@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
 #include "bconv.h"
 
 char* convertToBinary(char arr[], char output[]) {
