@@ -3,7 +3,7 @@ Small utility to translate ASCII text to binary
 Source code is 100% C and just over 60 lines.
 
 ## Instructions
-You will need to compile this yourself, I have included a VS solution if that helps.
+You will need to compile this yourself.
 You can also use gcc or clang, up to you
 
 Adding the resulting exe to your path will let you use the command from any cmd window.
