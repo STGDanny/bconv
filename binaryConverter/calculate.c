@@ -2,7 +2,7 @@
 
 char* convertToBinary(char arr[], char output[]) {
 	//For every element in arr[]
-	for (unsigned int i = 0; i < strlen(arr); i++) {
+	for (size_t i = 0; i < strlen(arr); i++) {
 		char converted[10] = { 0 };
 
 		//Put the binary conversion of element i into converted[]
