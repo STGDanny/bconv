@@ -1,5 +1,5 @@
 /*
-*	FILE			: bconv.h
+*	FILE			: main.c
 *	PROJECT			: binaryConverter
 *	PROGRAMMER		: Daniel Pieczewski
 *	FIRST VERSION	: 2019-11-15
