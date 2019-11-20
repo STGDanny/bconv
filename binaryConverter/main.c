@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 	convertToBinary(userInput, result);
 
 	//Print the result
-	printf("%s\n", result);
+	printf("\n%s\n", result);
 
 	return 0;
 }
