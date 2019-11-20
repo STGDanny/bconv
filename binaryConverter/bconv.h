@@ -14,8 +14,7 @@
 
 //Constants
 #define MAX_STRING_SIZE 141
-#define MAX_RETURN_STRING_SIZE 1270
-#define SIZE_OF_OCTET 9
+#define MAX_RETURN_STRING_SIZE (MAX_STRING_SIZE * 9)
 
 //Function prototypes
 char* convertToBinary(char[], char[]);
