@@ -20,9 +20,9 @@
 *	char output[]	: String to put the complete string into (Binary)
 *
 *	RETURNS			:
-*	char*		    : String containing the complete binary converted string
+*	void		    : void
 */
-char* convertToBinary(char arr[], char output[]) {
+void convertToBinary(char arr[], char output[]) {
 	//For every element in arr[]
 	for (size_t i = 0; i < strlen(arr); i++) {
 		char converted[10] = { 0 };
@@ -33,7 +33,6 @@ char* convertToBinary(char arr[], char output[]) {
 		//Add converted string on to returnString
 		strcat_s(output, MAX_RETURN_STRING_SIZE, converted);
 	}
-	return output;
 }
 
 
@@ -47,9 +46,9 @@ char* convertToBinary(char arr[], char output[]) {
 *	char result[]	: Output string one octet long
 *
 *	RETURNS			:
-*	char result[]   : Array of char representing an octet of binary
+*	void		    : void
 */
-char* calculate(int val, char result[]) {
+void calculate(int val, char result[]) {
 	//For every bit in an octet
 	for (int i = 7; i >= 0; i--) {
 		//If value is greater or equal to 2^i (powers of 2 up to 128)
@@ -67,5 +66,4 @@ char* calculate(int val, char result[]) {
 
 	//Add a space to end of octet
 	result[8] = ' ';
-	return result;
 }

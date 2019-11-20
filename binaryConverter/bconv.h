@@ -17,5 +17,5 @@
 #define MAX_RETURN_STRING_SIZE (MAX_STRING_SIZE * 9)
 
 //Function prototypes
-char* convertToBinary(char[], char[]);
-char* calculate(int val, char[]);
+void convertToBinary(char[], char[]);
+void calculate(int val, char[]);
