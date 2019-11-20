@@ -1,3 +1,13 @@
+/*
+*	FILE			: bconv.h
+*	PROJECT			: binaryConverter
+*	PROGRAMMER		: Daniel Pieczewski
+*	FIRST VERSION	: 2019-11-15
+*	DESCRIPTION		:
+*		This file is the driver code for the utility. It takes input from the command line
+*		and sends it off to the other functions in the project.
+*/
+
 #include "bconv.h"
 
 int main(int argc, char* argv[]) {
@@ -6,7 +16,7 @@ int main(int argc, char* argv[]) {
 	char result[MAX_RETURN_STRING_SIZE] = { 0 };
 
 	//Put value from cmd into userInput
-	strcpy(userInput, argv[1]);
+	strcpy_s(userInput, MAX_STRING_SIZE, argv[1]);
 
 	//Store the converted string in result[]
 	convertToBinary(userInput, result);
