@@ -5,7 +5,7 @@ Source code is 100% C and just over 60 lines.
 
 ## Instructions
 You will need to compile this yourself.
-You can also use gcc or clang, up to you
+You can use gcc or clang, up to you.
 
 Adding the resulting exe to your path will let you use the command from any cmd window.
 
@@ -18,8 +18,8 @@ Adding the resulting exe to your path will let you use the command from any cmd 
 		``` 
 
  - Alternatively:
-	- Navigate to the folder containing the exe
-	- Call bconv.exe followed by the string you want to translate
+	- Navigate to the folder containing the exe.
+	- Call bconv.exe followed by the string you want to translate.
 
 
 ## Dependencies
