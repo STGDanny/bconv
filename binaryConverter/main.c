@@ -14,10 +14,22 @@ int main(int argc, char* argv[]) {
 	char userInput[MAX_STRING_SIZE] = { 0 };
 	char result[MAX_RETURN_STRING_SIZE] = { 0 };
 
-	//If the user entered more than one string to convert:
-	if (argc > 2) {
-		//Print an error message but still continue with program
+	//Run error checking
+	switch (errorCheck(argc)) {
+	case(1):
+		//Everything is OK, continue with program
+		break;
+	case(0):
+		//If the user entered more than one string:
 		printf("\n\tMore than one string entered, ignoring the second one.\n");
+		//Continue with program
+		break;
+	case(-1):
+		//If the user didn't enter an argument:
+		printf("\n\tYou must enter a string to convert!\n");
+		printf("\n\tUsage: bconv <string to convert>\n");
+		//Exit the program early
+		return -1;
 	}
 
 	//Put value from cmd into userInput
@@ -29,5 +41,36 @@ int main(int argc, char* argv[]) {
 	//Print the result
 	printf("\n\t%s\n", result);
 
+	//End program
 	return 0;
+}
+
+
+
+/*
+*	FUNCTION		: errorCheck
+*	DESCRIPTION		: Checks for any errors in the amount of arguments passed to the program.
+*
+*	PARAMETERS		:
+*	int argc	    : Number of command line arguments passed to main
+*
+*	RETURNS			:
+*	int 		    : Status code
+*/
+int errorCheck(int argc) {
+	//If the user entered more than one argument:
+	if (argc > 2) {
+		//Continue with program, but warn the user.
+		return 0;
+	}
+	//If the user did not enter an argument
+	else if (argc == 1) {
+		//Send an exit command to main()
+		return -1;
+	}
+	//Nothing wrong:
+	else {
+		//No errors found
+		return 1;
+	}
 }

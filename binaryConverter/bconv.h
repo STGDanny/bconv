@@ -14,8 +14,12 @@
 
 //Constants
 #define MAX_STRING_SIZE 141
+
+//The size of the max return string is 9 times the max size of the input string
+//to fit all the octets
 #define MAX_RETURN_STRING_SIZE (MAX_STRING_SIZE * 9)
 
 //Function prototypes
 void convertToBinary(char[], char[]);
-void calculate(int val, char[]);
+void calculate(int, char[]);
+int errorCheck(int);
