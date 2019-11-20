@@ -9,8 +9,6 @@
 
 #include "bconv.h"
 
-
-
 /*
 *	FUNCTION		: convertToBinary
 *	DESCRIPTION		: Stores the resulting octet received from calculate() in the return string
