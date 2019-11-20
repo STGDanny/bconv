@@ -14,6 +14,11 @@ int main(int argc, char* argv[]) {
 	char userInput[MAX_STRING_SIZE] = { 0 };
 	char result[MAX_RETURN_STRING_SIZE] = { 0 };
 
+	//If the user entered more than one string to convert:
+	if (argc > 2) {
+		printf("\n\tMore than one string entered, ignoring the second one.\n");
+	}
+
 	//Put value from cmd into userInput
 	strcpy_s(userInput, MAX_STRING_SIZE, argv[1]);
 
@@ -21,7 +26,7 @@ int main(int argc, char* argv[]) {
 	convertToBinary(userInput, result);
 
 	//Print the result
-	printf("\n%s\n", result);
+	printf("\n\t%s\n", result);
 
 	return 0;
 }
