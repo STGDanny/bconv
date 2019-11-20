@@ -1,7 +1,7 @@
 # bconv - Binary Converter cmd Utility
 Small utility to translate ASCII text to binary.
 
-Source code is 100% C and just over 60 lines.
+Source code is 100% C and just under 120 lines.
 
 ## Instructions
 You will need to compile this yourself.
