@@ -10,6 +10,9 @@ You can also use gcc or clang, up to you
 Adding the resulting exe to your path will let you use the command from any cmd window.
 
 ## Usage
+This utility only accepts one string as input at a time.
+Adding whitespace between arguments will make the utility ignore anything but the first string.
+
  - If you added the command to your path:
 	- Call bconv followed by the string you want to translate, like this:
 
