@@ -16,6 +16,7 @@ int main(int argc, char* argv[]) {
 
 	//If the user entered more than one string to convert:
 	if (argc > 2) {
+		//Print an error message but still continue with program
 		printf("\n\tMore than one string entered, ignoring the second one.\n");
 	}
 
