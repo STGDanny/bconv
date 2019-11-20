@@ -22,4 +22,4 @@
 //Function prototypes
 void convertToBinary(char[], char[]);
 void calculate(int, char[]);
-int errorCheck(int);
+int errorCheck(int, char[]);

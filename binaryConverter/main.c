@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
 	char result[MAX_RETURN_STRING_SIZE] = { 0 };
 
 	//Run error checking
-	switch (errorCheck(argc)) {
+	switch (errorCheck(argc, argv[1])) {
 	case(1):
 		//Everything is OK, continue with program
 		break;
@@ -26,8 +26,13 @@ int main(int argc, char* argv[]) {
 		break;
 	case(-1):
 		//If the user didn't enter an argument:
-		printf("\n\tYou must enter a string to convert!\n");
+		printf("\n\tError! You must enter a string to convert!\n");
 		printf("\n\tUsage: bconv <string to convert>\n");
+		//Exit the program early
+		return -1;
+	case(-2):
+		//If the user entered a string too large:
+		printf("\n\tError! The input string must be less than 140 characters\n");
 		//Exit the program early
 		return -1;
 	}
@@ -57,7 +62,7 @@ int main(int argc, char* argv[]) {
 *	RETURNS			:
 *	int 		    : Status code
 */
-int errorCheck(int argc) {
+int errorCheck(int argc, char argv[]) {
 	//If the user entered more than one argument:
 	if (argc > 2) {
 		//Continue with program, but warn the user.
@@ -67,6 +72,11 @@ int errorCheck(int argc) {
 	else if (argc == 1) {
 		//Send an exit command to main()
 		return -1;
+	}
+	//If the argument is larger than the max size:
+	else if (strlen(argv) > MAX_STRING_SIZE) {
+		//Send exit code to main()
+		return -2;
 	}
 	//Nothing wrong:
 	else {
