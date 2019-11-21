@@ -10,6 +10,8 @@
 
 #include "bconv.h"
 
+
+
 int main(int argc, char* argv[]) {
 	char userInput[MAX_STRING_SIZE] = { 0 };
 	char result[MAX_RETURN_STRING_SIZE] = { 0 };
@@ -37,6 +39,7 @@ int main(int argc, char* argv[]) {
 		return -1;
 	}
 
+	//This code will only execute if errorCheck returned 1 or 0.
 	//Put value from cmd into userInput
 	strcpy_s(userInput, MAX_STRING_SIZE, argv[1]);
 
@@ -58,6 +61,7 @@ int main(int argc, char* argv[]) {
 *
 *	PARAMETERS		:
 *	int argc	    : Number of command line arguments passed to main
+*	char argv[]		: String entered from the command line
 *
 *	RETURNS			:
 *	int 		    : Status code
